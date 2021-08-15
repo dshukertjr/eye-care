@@ -90,6 +90,7 @@ class _HomePageState extends State<HomePage> {
     _sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
       _distance = _sharedPreferences!.getDouble(_distanceKey) ?? 0;
+      _dragStartDistance = _distance;
     });
   }
 }
